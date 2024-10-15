@@ -13,7 +13,7 @@ Allow: /kontakt.html
 Allow: /schwarzdeckungen.html
 Allow: /unternehmen.html
 Allow: /flachdach.html
-Allow: /flüssigkunststoff.html
+Allow: /fluessigkunststoff.html
 
 # Allow legal and privacy pages (optional but generally allowed)
 Allow: /datenschutzerklaerung.html
