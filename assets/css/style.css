@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
@@ -764,7 +764,7 @@ Navbar Area Style
   left: -312px;
   width: 520px;
   height: 150px;
-  background-image: url(../img/logo.png);
+  background-image: url(../images/logo/logo.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2123,7 +2123,7 @@ Banner Area Style
   position: relative;
   z-index: 1;
   height: 100%;
-  background-image: url(../img/banner-bg.jpg);
+  background-image: url(../images/hero/banner-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2328,15 +2328,15 @@ Hero Slider Area Style
 }
 
 .hero-slider-item.bg-1 {
-  background-image: url(../img/schwarzdecker.jpg);
+  background-image: url(../images/hero/schwarzdecker.jpg);
 }
 
 .hero-slider-item.bg-2 {
-  background-image: url(../img/sonne-daemmerung-luft-blauem-hintergrund.jpg);
+  background-image: url(../images/hero/sonne-daemmerung.jpg);
 }
 
 .hero-slider-item.bg-3 {
-  background-image: url(../img/modernes-hausdach-mit-niedrigem-winkel.jpg);
+  background-image: url(../images/hero/modernes-hausdach.jpg);
 }
 
 .hero-slider-content {
@@ -2696,7 +2696,7 @@ Services Area Style
 Counter Area Style
 ======================================================*/
 .counter-area {
-  background-image: url(../img/schwarzdecker.jpg);
+  background-image: url(../images/hero/schwarzdecker.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2733,7 +2733,7 @@ Counter Area Style
 .counter-area.counter-area-style-two .counter-bg {
   max-width: 1320px;
   margin: auto;
-  background-image: url(../img/schwarzdecker.jpg);
+  background-image: url(../images/hero/schwarzdecker.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2744,7 +2744,7 @@ Counter Area Style
 .counter-area.counter-area-style-two .counter-bg-two {
   max-width: 100%;
   margin: auto;
-  background-image: url(../img/schwarzdecker2.jpg);
+  background-image: url(../images/services/schwarzdecker2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3149,7 +3149,7 @@ Choose Us Area Style
 }
 
 .choose-us-from-bg {
-  background-image: url(../img/doors-g97aeb34ea_640.jpg);
+  background-image: url(../images/services/doors.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4733,7 +4733,7 @@ Page Title Area Style
   padding-bottom: 100px;
   position: relative;
   z-index: 1;
-  background-image: url(../img/banner-bg.jpg);
+  background-image: url(../images/hero/banner-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4741,7 +4741,7 @@ Page Title Area Style
 }
 
 .page-title-area.bg-1 {
-  background-image: url(../img/banner-bg.jpg);
+  background-image: url(../images/hero/banner-bg.jpg);
 }
 
 .page-title-area::before {

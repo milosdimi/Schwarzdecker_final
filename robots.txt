@@ -1,23 +1,5 @@
-
 User-agent: *
-Disallow: /css/
-Disallow: /icons/
-Disallow: /img/
-Disallow: /java/
 Disallow: /.git/
+Disallow: /assets/images/misc/
 
-Allow: /index.html
-Allow: /leistungen.html
-Allow: /galerie.html
-Allow: /kontakt.html
-Allow: /schwarzdeckungen.html
-Allow: /unternehmen.html
-Allow: /flachdach.html
-Allow: /fluessigkunststoff.html
-
-# Allow legal and privacy pages (optional but generally allowed)
-Allow: /datenschutzerklaerung.html
-Allow: /impressum.html
-
-# Example sitemap (add correct link if applicable)
-# Sitemap: https://www.schwarzdecker.cc/sitemap.xml
+Sitemap: https://www.schwarzdecker.cc/sitemap.xml
