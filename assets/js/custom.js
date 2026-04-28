@@ -3,6 +3,24 @@
   // Mean Menu
   $(".mean-menu").meanmenu({
     meanScreenWidth: "991",
+    meanMenuOpen:  "<span></span><span></span><span></span>",
+    meanMenuClose: "<span></span><span></span><span></span>",
+  });
+
+  // Close mobile menu on outside click.
+  // Uses composedPath() so the check survives meanmenu replacing the button's
+  // inner spans mid-event (detached nodes break .closest()).
+  $(document).on("click", function (e) {
+    if ($(window).width() > 991) return;
+    var path = e.originalEvent.composedPath ? e.originalEvent.composedPath() : [];
+    var inMobileNav = path.length
+      ? path.some(function (node) {
+          return node.classList && node.classList.contains("mobile-responsive-nav");
+        })
+      : !!$(e.target).closest(".mobile-responsive-nav").length;
+    if (!inMobileNav && $(".meanmenu-reveal").hasClass("meanclose")) {
+      $(".meanmenu-reveal").trigger("click");
+    }
   });
 
   // Header Sticky, Go To Top JS
@@ -137,11 +155,8 @@
     margin: 0,
     nav: false,
     mouseDrag: true,
-    thumbs: true,
-    thumbsPrerendered: true,
     items: 1,
-    dots: false,
-    autoHeight: true,
+    dots: true,
     autoplay: true,
     smartSpeed: 1500,
     autoplayHoverPause: true,

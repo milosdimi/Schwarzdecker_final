@@ -281,7 +281,7 @@
   }
   /* Home Two */
   .hero-slider-item {
-    height: 100%;
+    height: 500px;
     padding-top: 55px;
     padding-bottom: 120px;
   }
@@ -298,12 +298,6 @@
   .hero-slider-content p {
     font-size: 16px;
     margin-bottom: 20px;
-    font-size: 16px;
-  }
-  .hero-slider-area .thumbs-wrap .owl-thumbs {
-    right: 0;
-    bottom: 60px;
-    text-align: center;
   }
   .single-testimonials.style-two {
     padding: 20px;
@@ -940,7 +934,7 @@
   }
   /* Home Two */
   .hero-slider-item {
-    height: 100%;
+    height: 500px;
     padding-top: 55px;
     padding-bottom: 120px;
   }
@@ -957,12 +951,6 @@
   .hero-slider-content p {
     font-size: 16px;
     margin-bottom: 20px;
-    font-size: 16px;
-  }
-  .hero-slider-area .thumbs-wrap .owl-thumbs {
-    right: 0;
-    bottom: 60px;
-    text-align: center;
   }
   .single-testimonials.style-two {
     padding: 20px;
@@ -1004,6 +992,18 @@
   }
   .about-img-3 img {
     width: 100%;
+  }
+  .about-img-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px;
+    gap: 8px;
+  }
+  .about-img-grid .about-grid-item:nth-child(1),
+  .about-img-grid .about-grid-item:nth-child(2),
+  .about-img-grid .about-grid-item:nth-child(3),
+  .about-img-grid .about-grid-item:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
   }
   .hero-slider-item::before {
     background: -webkit-gradient(linear, left top, right top, color-stop(35%, rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9)));
@@ -1286,6 +1286,18 @@
   .about-img-3 {
     text-align: center;
   }
+  .about-img-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px 160px;
+    gap: 8px;
+  }
+  .about-img-grid .about-grid-item:nth-child(1),
+  .about-img-grid .about-grid-item:nth-child(2),
+  .about-img-grid .about-grid-item:nth-child(3),
+  .about-img-grid .about-grid-item:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+  }
   .about-area.align-custom .row {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
@@ -1339,7 +1351,7 @@
     position: relative;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav {
-    margin-top: 50px;
+    margin-top: 68px;
     background-color: #ffffff;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul {
@@ -1393,20 +1405,45 @@
     background: #555;
   }
   .mobile-responsive-nav .mean-container a.meanmenu-reveal {
-    top: 0;
+    top: 10px;
     padding: 0;
-    width: 35px;
+    width: 30px;
     height: 30px;
-    padding-top: 7px;
-    color: #ffffff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 6px;
   }
   .mobile-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #cf0011;
-    height: 4px;
-    margin-top: -6px;
-    border-radius: 0;
-    position: relative;
-    top: 8px;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--red);
+    border-radius: 2px;
+    position: static;
+    top: 0;
+    margin-top: 0;
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+  .mobile-responsive-nav .mean-container a.meanmenu-reveal.meanclose span:nth-child(1) {
+    -webkit-transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
+  }
+  .mobile-responsive-nav .mean-container a.meanmenu-reveal.meanclose span:nth-child(2) {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  .mobile-responsive-nav .mean-container a.meanmenu-reveal.meanclose span:nth-child(3) {
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   }
   .mobile-responsive-nav .mean-container .mean-bar {
     background: transparent;
@@ -1436,7 +1473,7 @@
     right: -62px;
   }
   .others-options-for-mobile-devices {
-    top: -1px;
+    top: 10px;
     right: 50px;
   }
   .others-options-for-mobile-devices ul li {
