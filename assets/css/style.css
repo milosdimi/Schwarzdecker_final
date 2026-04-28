@@ -433,6 +433,22 @@ Default Btn Area Style*/
   transform: scaleY(1);
 }
 
+.navbar-cta-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.navbar-cta-btn i {
+  font-size: 16px;
+  position: static;
+}
+
 /*
 Read More Btn Area Style*/
 .read-more {
