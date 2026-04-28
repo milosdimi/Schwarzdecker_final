@@ -369,7 +369,7 @@
 
             <ul>
               <li class="icon-list-item">
-                <img src="assets/images/icons/auswertung.png" alt="Icon Beispiel" width="50" height="50"
+                <img src="assets/images/icons/auswertung.png" alt="Projektbesprechung" width="50" height="50"
                   loading="lazy" />
                 <div class="text-content">
                   <h3>Projektbesprechung</h3>
@@ -384,7 +384,7 @@
               </li>
 
               <li class="icon-list-item">
-                <img src="assets/images/icons/e-mail-adresse.png" alt="Icon Beispiel" width="50" height="50"
+                <img src="assets/images/icons/e-mail-adresse.png" alt="Projektplanung" width="50" height="50"
                   loading="lazy" />
                 <div class="text-content">
                   <h3>Projektplanung</h3>
@@ -397,7 +397,7 @@
                 </div>
               </li>
               <li class="icon-list-item">
-                <img src="assets/images/icons/garantiert.png" alt="Icon Beispiel" width="50" height="50"
+                <img src="assets/images/icons/garantiert.png" alt="Projektabwicklung" width="50" height="50"
                   loading="lazy" />
                 <div class="text-content">
                   <h3>Projektabwicklung</h3>
@@ -415,30 +415,24 @@
         <div class="col-lg-6">
           <form onsubmit="sendMail(event)">
             <div class="choose-us-from-bg ml-15">
-              <h2>
-                Von der Planung bis zur Fertigstellung – wir sind für Sie da
-              </h2>
+              <h2>Schreiben Sie uns – wir melden uns schnellstmöglich</h2>
               <div class="form-group">
                 <i class="ri-user-fill"></i>
                 <input class="form-control" type="text" name="name" placeholder="Name" required />
-                <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
                 <i class="ri-mail-line"></i>
                 <input type="email" class="form-control" name="email" placeholder="E-Mail-Adresse" required />
-                <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
                 <i class="ri-phone-fill"></i>
-                <input class="form-control" type="text" name="message" placeholder="Telefonnummer" required />
-                <div class="help-block with-errors"></div>
+                <input class="form-control" type="tel" name="phone" placeholder="Telefonnummer" />
               </div>
-              <input type="hidden" name="message" value="Zovi Coveka" />
-              <div class="bg-white">
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
+              <div class="form-group">
+                <i class="ri-message-2-line"></i>
+                <textarea class="form-control" name="message" placeholder="Ihre Nachricht" rows="4" required></textarea>
               </div>
-              <div class="clearfix"></div>
-              <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer">
+              <button type="submit" class="default-btn">
                 Jetzt Kontakt aufnehmen
               </button>
             </div>
@@ -461,7 +455,7 @@
 
         <div class="col-lg-4 col-md-4">
           <div class="call-now">
-            <a href="tel:+43 667 7744404" class="default-btn">+43 667 7744404</a>
+            <a href="tel:+436677744404" class="default-btn"><i class="ri-phone-line"></i> +43 667 7744404</a>
           </div>
         </div>
       </div>
