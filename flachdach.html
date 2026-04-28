@@ -156,7 +156,7 @@
 
           <ul>
             <li>
-              <a href="/index.html"> Home </a>
+              <a href="/">Home</a>
             </li>
 
             <li class="active">Flachdach</li>
@@ -200,13 +200,9 @@
 
               <div class="gap-20"></div>
 
-              <div class="about-img">
-                <img src="./assets/images/services/services_2.jpg" alt="schwarzdecker" loading="lazy" />
-                <img
-                  src="./assets/images/services/services_5.jpg"
-                  alt="Schwarzdecker"
-                  class="about-img-2" loading="lazy"
-                />
+              <div class="service-img-grid">
+                <img src="assets/images/services/flachdach/schwarzdecker-kufstein-06.webp" alt="Flachdach Abdichtung Kufstein" loading="lazy" />
+                <img src="assets/images/services/flachdach/schwarzdecker-kufstein-07.webp" alt="Flachdach Sanierung Kufstein" loading="lazy" />
               </div>
             </div>
           </div>
@@ -238,54 +234,24 @@
 
               <form onsubmit="sendMail(event)">
                 <div class="choose-us-from-bg ml-15">
-                  <h3>
-                    Jetzt eine Anfrage senden
-                  </h3>
+                  <h3>Jetzt eine Anfrage senden</h3>
                   <div class="form-group">
                     <i class="ri-user-fill"></i>
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="name"
-                      placeholder="Name"
-                      required
-                    />
-                    <div class="help-block with-errors"></div>
+                    <input class="form-control" type="text" name="name" placeholder="Name" required />
                   </div>
                   <div class="form-group">
                     <i class="ri-mail-line"></i>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="E-Mail-Adresse"
-                      required
-                    />
-                    <div class="help-block with-errors"></div>
+                    <input type="email" class="form-control" name="email" placeholder="E-Mail-Adresse" required />
                   </div>
                   <div class="form-group">
                     <i class="ri-phone-fill"></i>
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="message"
-                      placeholder="Telefonnummer"
-                      required
-                    />
-                    <div class="help-block with-errors"></div>
+                    <input class="form-control" type="tel" name="phone" placeholder="Telefonnummer" />
                   </div>
-                  <input type="hidden" name="message" value="Zainteresovan za Flachdach" />
-                  <div class="bg-white">
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                  <div class="form-group">
+                    <i class="ri-message-2-line"></i>
+                    <textarea class="form-control" name="message" placeholder="Ihre Nachricht" rows="3" required></textarea>
                   </div>
-                  <div class="clearfix"></div>
-                  <button
-                    type="submit"
-                    class="default-btn"
-                    style="pointer-events: all; cursor: pointer"
-                  >
-                    Jetzt Kontakt aufnehmen
-                  </button>
+                  <button type="submit" class="default-btn">Jetzt Kontakt aufnehmen</button>
                 </div>
               </form>
             </div>
@@ -307,9 +273,7 @@
 
           <div class="col-lg-4 col-md-4">
             <div class="call-now">
-              <a href="tel:+43 667 7744404" class="default-btn"
-                >+43 667 7744404</a
-              >
+              <a href="tel:+436677744404" class="default-btn"><i class="ri-phone-line"></i> +43 667 7744404</a>
             </div>
           </div>
         </div>

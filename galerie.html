@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
     <head>
     <meta charset="UTF-8" />
@@ -61,7 +61,6 @@
     }
     </script>
 
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
@@ -91,7 +90,8 @@
         <div class="pl-flip-1 pl-flip-2"></div>
       </div>
     </div>
-        <header class="header-area">
+
+    <header class="header-area">
       <div class="navbar-area navbar-area-style-two">
 
         <!-- Mobile Nav -->
@@ -150,149 +150,155 @@
       </div>
     </header>
 
-    <section class="gallery-area ptb-100">
+    <div class="page-title-area bg-3">
       <div class="container">
-        <h2>Unsere Galerie</h2>
-        <div class="gallery">
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0004.jpg"
-              alt="Foto 1"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0004.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0005.jpg"
-              alt="Foto 2"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0005.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0006.jpg"
-              alt="Foto 3"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0006.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0007.jpg"
-              alt="Foto 4"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0007.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0008.jpg"
-              alt="Foto 5"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0008.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0009.jpg"
-              alt="Foto 6"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0009.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0010.jpg"
-              alt="Foto 7"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0010.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0011.jpg"
-              alt="Foto 8"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0011.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0012.jpg"
-              alt="Foto 9"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0012.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0013.jpg"
-              alt="Foto 10"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0013.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0014.jpg"
-              alt="Foto 11"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0014.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0015.jpg"
-              alt="Foto 12"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0015.jpg')" loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="assets/images/gallery/IMG-20240918-WA0016.jpg"
-              alt="Foto 13"
-              class="gallery-thumb"
-              onclick="openModal('galerie/IMG-20240918-WA0016.jpg')" loading="lazy"
-            />
-          </div>
-          <!-- Weitere Bilder hier hinzufügen -->
+        <div class="page-title-content">
+          <h2>Galerie</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active">Galerie</li>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <!-- Modal für die größere Ansicht -->
-      <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img" loading="lazy" />
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <section class="gallery-area pt-100 pb-70">
+      <div class="container-xxl">
+        <div class="section-title">
+          <h2>Unsere Arbeiten</h2>
+          <p>Einblicke in abgeschlossene Projekte – Flachdach, Schwarzdeckung und Abdichtung in Kufstein und Umgebung</p>
+        </div>
+
+        <div class="gallery-masonry">
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-01.webp" alt="Flachdach Abdichtung Kufstein – Projekt 1" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-02.webp" alt="Schwarzdeckung Kufstein – Projekt 2" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-03.webp" alt="Dachsanierung Tirol – Projekt 3" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-04.webp" alt="Flüssigkunststoff Abdichtung – Projekt 4" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-05.webp" alt="Flachdach Neubau Kufstein – Projekt 5" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-06.webp" alt="Bitumen Abdichtung Tirol – Projekt 6" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-07.webp" alt="Dacharbeiten Kufstein – Projekt 7" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-08.webp" alt="Schwarzdecker Kufstein – Projekt 8" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-09.webp" alt="Dachdämmung Tirol – Projekt 9" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-10.webp" alt="Flachdach Sanierung Kufstein – Projekt 10" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-11.webp" alt="Abdichtung Terrasse Kufstein – Projekt 11" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-12.webp" alt="Schwarzdeckerei Tirol – Projekt 12" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-13.webp" alt="Dacharbeiten Tirol – Projekt 13" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-14.webp" alt="Flachdach Abdichtung Tirol – Projekt 14" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-15.webp" alt="Katic Schwarzdecker Projekt 15" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-16.webp" alt="Dachabdichtung Kufstein – Projekt 16" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-17.webp" alt="Schwarzdecker Tirol – Projekt 17" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/gallery/schwarzdecker-katic-kufstein-galerie-18.webp" alt="Katic Bau Kufstein – Projekt 18" loading="lazy" />
+            <span class="gallery-zoom"><i class="ri-zoom-in-line"></i></span>
+          </div>
+
+        </div>
       </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="glightbox-overlay" id="glightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+      <button class="glightbox-btn glightbox-close" id="glightboxClose" aria-label="Schließen">
+        <i class="ri-close-line"></i>
+      </button>
+      <button class="glightbox-btn glightbox-prev" id="glightboxPrev" aria-label="Vorheriges Bild">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <div class="glightbox-img-wrap">
+        <img id="glightboxImg" src="" alt="" />
+      </div>
+      <button class="glightbox-btn glightbox-next" id="glightboxNext" aria-label="Nächstes Bild">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+      <div class="glightbox-counter" id="glightboxCounter"></div>
+    </div>
 
     <section class="calling-area ptb-100">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-8 col-md-8">
             <h2>Sie benötigen einen Schwarzdecker?</h2>
-            <p>
-              Rufen Sie uns an. Sie können uns Ihren Namen und Ihre
-              Telefonnummer auch ganz bequem per SMS senden
-            </p>
+            <p>Rufen Sie uns an. Sie können uns Ihren Namen und Ihre Telefonnummer auch ganz bequem per SMS senden.</p>
           </div>
-
           <div class="col-lg-4 col-md-4">
             <div class="call-now">
-              <a href="tel:+43 667 7744404" class="default-btn"
-                >+43 667 7744404</a
-              >
+              <a href="tel:+436677744404" class="default-btn"><i class="ri-phone-line"></i> +43 667 7744404</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-        <footer class="footer-area black-bg-color pt-100 pb-70">
+
+    <footer class="footer-area black-bg-color pt-100 pb-70">
       <div class="container-xxl">
         <div class="row">
           <div class="col-lg-3 col-md-6">
@@ -359,17 +365,17 @@
         </div>
       </div>
     </footer>
+
     <div class="copy-right-area">
       <div class="container">
         <p>
           Copyright <i class="ri-copyright-line"></i> 2025 Schwarzdecker-Katic |
           Design by
-          <a href="https://www.dimit.cc/" class="text-muted">
-            <span class="ms-1">Dimit</span></a
-          >
+          <a href="https://www.dimit.cc/" class="text-muted"><span class="ms-1">Dimit</span></a>
         </p>
       </div>
     </div>
+
     <div class="go-top">
       <i class="ri-arrow-up-s-fill"></i>
       <i class="ri-arrow-up-s-fill"></i>
@@ -378,15 +384,7 @@
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-banner">
       <div class="cookie-content">
-        <p>
-          Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website
-          zu bieten. Durch die Nutzung dieser Website erklären Sie sich mit der
-          Verwendung von Cookies einverstanden. Weitere Informationen finden Sie
-          in unserer
-          <a href="/datenschutzerklaerung.html" class="cookie-link"
-            >Datenschutzerklärung</a
-          >.
-        </p>
+        <p>Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten. Durch die Nutzung dieser Website erklären Sie sich mit der Verwendung von Cookies einverstanden. Weitere Informationen finden Sie in unserer <a href="/datenschutzerklaerung.html" class="cookie-link">Datenschutzerklärung</a>.</p>
         <button id="accept-cookies" class="cookie-button">Akzeptieren</button>
         <button id="decline-cookies" class="cookie-button">Ablehnen</button>
       </div>
@@ -402,5 +400,59 @@
     <script src="assets/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/before-after.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+    (function () {
+      var items = Array.from(document.querySelectorAll('.gallery-masonry .gallery-item'));
+      var overlay = document.getElementById('glightbox');
+      var img = document.getElementById('glightboxImg');
+      var counter = document.getElementById('glightboxCounter');
+      var current = 0;
+      var srcs = items.map(function (el) { return el.querySelector('img').src; });
+      var alts = items.map(function (el) { return el.querySelector('img').alt; });
+
+      items.forEach(function (item, i) {
+        item.style.animationDelay = (i * 0.045) + 's';
+        item.addEventListener('click', function () { open(i); });
+      });
+
+      function open(index) {
+        current = index;
+        img.src = srcs[current];
+        img.alt = alts[current];
+        counter.textContent = (current + 1) + ' / ' + srcs.length;
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      function navigate(dir) {
+        img.classList.add('switching');
+        setTimeout(function () {
+          current = (current + dir + srcs.length) % srcs.length;
+          img.src = srcs[current];
+          img.alt = alts[current];
+          counter.textContent = (current + 1) + ' / ' + srcs.length;
+          img.classList.remove('switching');
+        }, 180);
+      }
+
+      document.getElementById('glightboxClose').addEventListener('click', close);
+      document.getElementById('glightboxPrev').addEventListener('click', function () { navigate(-1); });
+      document.getElementById('glightboxNext').addEventListener('click', function () { navigate(1); });
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+      });
+    })();
+    </script>
+
   </body>
 </html>

@@ -123,7 +123,7 @@
     font-size: 15px;
   }
   .about-content h2 {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 15px;
   }
   .about-content ul {
@@ -1516,4 +1516,18 @@
     left: -10px;
   }
 }
+/* Gallery Masonry – Responsive Columns */
+@media only screen and (max-width: 575px) {
+  .gallery-masonry {
+    columns: 1;
+  }
+  .glightbox-prev { left: 8px; }
+  .glightbox-next { right: 8px; }
+}
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .gallery-masonry {
+    columns: 2;
+  }
+}
+
 /*# sourceMappingURL=responsive.css.map */

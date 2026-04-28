@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: /.git/
-Disallow: /assets/images/misc/
 
 Sitemap: https://www.schwarzdecker.cc/sitemap.xml

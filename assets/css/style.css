@@ -16,6 +16,9 @@ body {
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   color: #6b6b6b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -2739,11 +2742,165 @@ Services Area Style
 .about-img .about-img-2 {
   position: absolute;
   left: 0;
-  bottom: -169px;
+  bottom: -129px;
 }
 
 .about-img-3 {
   margin-bottom: 30px;
+}
+
+.service-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.service-img-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ==========================================
+   Gallery – Masonry + Lightbox
+   ========================================== */
+.gallery-masonry {
+  columns: 3;
+  column-gap: 12px;
+}
+.gallery-masonry .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  animation: galleryItemIn 0.5s ease forwards;
+}
+.gallery-masonry .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.gallery-masonry .gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.35s ease;
+  pointer-events: none;
+}
+.gallery-masonry .gallery-item .gallery-zoom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  transition: all 0.35s ease;
+  z-index: 2;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  pointer-events: none;
+}
+.gallery-masonry .gallery-item:hover img {
+  transform: scale(1.07);
+}
+.gallery-masonry .gallery-item:hover::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+.gallery-masonry .gallery-item:hover .gallery-zoom {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+@keyframes galleryItemIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Lightbox */
+.glightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.glightbox-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.glightbox-img-wrap {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glightbox-img-wrap img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.18s ease;
+}
+.glightbox-img-wrap img.switching {
+  opacity: 0;
+}
+.glightbox-btn {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 10000;
+}
+.glightbox-btn:hover {
+  background: rgba(86, 218, 185, 0.6);
+  border-color: #56dab9;
+}
+.glightbox-close {
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+}
+.glightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.glightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.glightbox-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  letter-spacing: 2px;
+  z-index: 10000;
 }
 
 .about-img-grid {
@@ -2782,6 +2939,49 @@ Services Area Style
 .about-img-grid .about-grid-item:nth-child(4) {
   grid-column: 3;
   grid-row: 2;
+}
+
+/* Unternehmen – animiertes 2×2 Mosaic */
+.about-img-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 210px 210px;
+  gap: 10px;
+}
+.about-img-mosaic .mosaic-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  opacity: 0;
+  animation: mosaicFadeIn 0.55s ease forwards;
+}
+.about-img-mosaic .mosaic-item:nth-child(1) { animation-delay: 0.10s; }
+.about-img-mosaic .mosaic-item:nth-child(2) { animation-delay: 0.25s; }
+.about-img-mosaic .mosaic-item:nth-child(3) { animation-delay: 0.40s; }
+.about-img-mosaic .mosaic-item:nth-child(4) { animation-delay: 0.55s; }
+.about-img-mosaic .mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.about-img-mosaic .mosaic-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(86, 218, 185, 0);
+  transition: background 0.35s ease;
+  pointer-events: none;
+}
+.about-img-mosaic .mosaic-item:hover img {
+  transform: scale(1.07);
+}
+.about-img-mosaic .mosaic-item:hover::after {
+  background: rgba(86, 218, 185, 0.18);
+}
+@keyframes mosaicFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /*
@@ -4641,25 +4841,25 @@ Footer Area Style
   color: #ffffff;
 }
 
-.single-footer-widget .social-icon {
+.social-icon {
   line-height: 1;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.single-footer-widget .social-icon li {
+.social-icon li {
   display: inline-block;
   margin-right: 5px;
 }
 
-.single-footer-widget .social-icon li span {
+.social-icon li span {
   color: #ffffff;
   position: relative;
   top: -4px;
 }
 
-.single-footer-widget .social-icon li a {
+.social-icon li a {
   width: 42px;
   height: 42px;
   line-height: 42px;
@@ -4674,8 +4874,8 @@ Footer Area Style
   z-index: 1;
 }
 
-.single-footer-widget .social-icon li a::before,
-.single-footer-widget .social-icon li a::after {
+.social-icon li a::before,
+.social-icon li a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -4688,21 +4888,26 @@ Footer Area Style
   transition: all ease 0.5s;
 }
 
-.single-footer-widget .social-icon li a::after {
+.social-icon li a::after {
   height: 0;
   width: 100%;
 }
 
-.single-footer-widget .social-icon li a:hover::before {
+.social-icon li a:hover::before {
   width: 100%;
   left: auto;
   right: 0;
 }
 
-.single-footer-widget .social-icon li a:hover::after {
+.social-icon li a:hover::after {
   height: 100%;
   left: auto;
   right: 0;
+}
+
+.social-icon li a.whatsapp:hover::before,
+.social-icon li a.whatsapp:hover::after {
+  background-color: #25d366;
 }
 
 .single-footer-widget h3 {
@@ -4847,7 +5052,7 @@ Page Title Area Style
   padding-bottom: 100px;
   position: relative;
   z-index: 1;
-  background-image: url(../images/hero/banner-bg.jpg);
+  background-image: url(../images/hero/katic.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4855,7 +5060,7 @@ Page Title Area Style
 }
 
 .page-title-area.bg-1 {
-  background-image: url(../images/hero/banner-bg.jpg);
+  background-image: url(../images/hero/katic.webp);
 }
 
 .page-title-area::before {
@@ -4865,7 +5070,7 @@ Page Title Area Style
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #8d8d8da6;
   opacity: 0.8;
   z-index: -1;
 }
