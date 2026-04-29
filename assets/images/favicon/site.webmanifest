@@ -1,21 +1,28 @@
 {
-  "name": "Schwarzdecker",
+  "name": "Schwarzdecker-Katic – Flachdecker in Kufstein",
   "short_name": "Katic",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#c0392b",
+  "background_color": "#ffffff",
   "icons": [
+    {
+      "src": "/assets/images/favicon/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/assets/images/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/assets/images/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#f7a6a9",
-  "display": "standalone"
+  ]
 }

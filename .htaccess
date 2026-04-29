@@ -68,6 +68,12 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # -------------------------------------------------------
-# 7. Fehlerseiten (optional anpassen)
+# 7. Favicon im Root (Google & SEO-Tools suchen hier zuerst)
+# -------------------------------------------------------
+RewriteRule ^favicon\.ico$ /assets/images/favicon/favicon.ico [L,R=301]
+RewriteRule ^favicon\.png$ /assets/images/favicon/favicon-96x96.png [L,R=301]
+
+# -------------------------------------------------------
+# 8. Fehlerseiten (optional anpassen)
 # -------------------------------------------------------
 # ErrorDocument 404 /404.html
