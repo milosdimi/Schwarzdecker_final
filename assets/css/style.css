@@ -2235,7 +2235,7 @@ Banner Area Style
 }
 
 .banner-content h1 {
-  font-size: 80px;
+  font-size: 54px;
   margin-bottom: 25px;
   color: #212529;
   line-height: 1.1;
@@ -2377,7 +2377,7 @@ Hero Slider Area Style
 
 .hero-slider-area .owl-dots {
   position: absolute;
-  bottom: 30px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -2407,7 +2407,7 @@ Hero Slider Area Style
 }
 
 .hero-slider-content h1 {
-  font-size: 80px;
+  font-size: 54px;
   margin-bottom: 30px;
   font-weight: 900;
 }
@@ -5083,7 +5083,7 @@ Page Title Area Style
 .page-title-area .page-title-content h1,
 .page-title-area .page-title-content h2 {
   margin-bottom: 15px;
-  font-size: 48px;
+  font-size: 34px;
 }
 
 .page-title-area .page-title-content ul {
