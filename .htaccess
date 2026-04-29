@@ -1,0 +1,73 @@
+# -------------------------------------------------------
+# Schwarzdecker-Katic – Apache Server Configuration
+# -------------------------------------------------------
+
+Options -Indexes
+
+# -------------------------------------------------------
+# 1. www-Redirect (non-www → www, HTTP 301)
+# -------------------------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# HTTP → HTTPS (falls nicht schon vom Hosting erledigt)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# -------------------------------------------------------
+# 2. Charset im HTTP-Header
+# -------------------------------------------------------
+AddDefaultCharset UTF-8
+
+# -------------------------------------------------------
+# 3. Komprimierung (gzip)
+# -------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE image/svg+xml application/json
+</IfModule>
+
+# -------------------------------------------------------
+# 4. Browser-Caching (Ladezeit verbessern)
+# -------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Bilder – 1 Jahr
+  ExpiresByType image/webp      "access plus 1 year"
+  ExpiresByType image/jpeg      "access plus 1 year"
+  ExpiresByType image/png       "access plus 1 year"
+  ExpiresByType image/svg+xml   "access plus 1 year"
+  ExpiresByType image/x-icon    "access plus 1 year"
+
+  # CSS & JS – 1 Monat
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+
+  # HTML – kein Cache (immer frisch)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# -------------------------------------------------------
+# 5. Keep-Alive (schnellere Verbindungen)
+# -------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# -------------------------------------------------------
+# 6. Sicherheits-Header
+# -------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# -------------------------------------------------------
+# 7. Fehlerseiten (optional anpassen)
+# -------------------------------------------------------
+# ErrorDocument 404 /404.html
