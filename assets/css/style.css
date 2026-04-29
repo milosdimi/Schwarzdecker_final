@@ -5080,6 +5080,7 @@ Page Title Area Style
   text-align: center;
 }
 
+.page-title-area .page-title-content h1,
 .page-title-area .page-title-content h2 {
   margin-bottom: 15px;
   font-size: 48px;
