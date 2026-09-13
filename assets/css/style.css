@@ -10,6 +10,9 @@
 :root {
   --black: #191919;
   --red: #56dab9;
+  /* Darker version of --red for small text on light backgrounds,
+     since #56dab9 fails WCAG AA contrast (1.6-1.7:1) as text. */
+  --red-text: #1a7560;
 }
 
 body {
@@ -481,7 +484,7 @@ Section Title Area Style*/
 
 .section-title span {
   font-size: 16px;
-  color: var(--red);
+  color: var(--red-text);
   display: block;
   margin-bottom: 5px;
   font-weight: 700;
@@ -2408,7 +2411,7 @@ Hero Slider Area Style
 }
 
 .hero-slider-content span {
-  color: var(--red);
+  color: var(--red-text);
   display: block;
   margin-bottom: 15px;
 }
@@ -2679,7 +2682,7 @@ Services Area Style
 
 .about-content span {
   font-size: 16px;
-  color: var(--red);
+  color: var(--red-text);
   display: block;
   margin-bottom: 15px;
 }
@@ -3422,7 +3425,7 @@ Choose Us Area Style
 }
 
 .choose-us-content span {
-  color: var(--red);
+  color: var(--red-text);
   margin-bottom: 15px;
   display: block;
 }
@@ -5046,6 +5049,12 @@ Copy Right Area Style
 
 .copy-right-area p a:hover {
   color: var(--red);
+}
+
+/* Bootstrap's .text-muted (#6c757d) fails contrast on this dark
+   background (3.48:1, needs 4.5:1) - override with a lighter gray. */
+.copy-right-area .text-muted {
+  color: #9aa0a6 !important;
 }
 
 /*====================================================
