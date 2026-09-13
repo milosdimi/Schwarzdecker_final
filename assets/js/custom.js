@@ -7,6 +7,23 @@
     meanMenuOpen:  "<span></span><span></span><span></span>",
     meanMenuClose: "<span></span><span></span><span></span>",
   });
+  $(".meanmenu-reveal").attr("aria-label", "Menü öffnen");
+
+  // Give Owl Carousel's auto-generated dot buttons an accessible name
+  function labelOwlDots(carousel) {
+    $(carousel)
+      .find(".owl-dot")
+      .each(function (i) {
+        $(this).attr("aria-label", "Slide " + (i + 1));
+      });
+  }
+  $(document).on(
+    "initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel",
+    ".owl-carousel",
+    function () {
+      labelOwlDots(this);
+    }
+  );
 
   // Close mobile menu on outside click.
   // Uses composedPath() so the check survives meanmenu replacing the button's
