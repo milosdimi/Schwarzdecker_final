@@ -2268,6 +2268,13 @@ Hero Slider Area Style
 ======================================================*/
 .hero-slider-area {
   position: relative;
+  min-height: 680px;
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-slider-area {
+    min-height: 500px;
+  }
 }
 
 .hero-slider-area .owl-item.active .hero-slider-content {
