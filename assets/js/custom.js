@@ -150,16 +150,33 @@
 // Contact form
 function sendMail(event) {
   event.preventDefault();
+  var form = event.target;
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var originalBtnText = submitBtn ? submitBtn.innerHTML : null;
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Wird gesendet...";
+  }
+
   fetch("https://formspree.io/f/moqgerva", {
     method: "POST",
-    body: new FormData(event.target),
+    body: new FormData(form),
     headers: { Accept: "application/json" },
   })
-    .then(() => {
-      window.location.href = "./send_mail.html";
+    .then((response) => {
+      if (response.ok) {
+        window.location.href = "./send_mail.html";
+      } else {
+        throw new Error("Formspree responded with status " + response.status);
+      }
     })
     .catch((error) => {
       console.log(error);
+      alert("Ihre Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.");
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
     });
 }
 

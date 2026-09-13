@@ -76,4 +76,4 @@ RewriteRule ^favicon\.png$ /assets/images/favicon/favicon-96x96.png [L,R=301]
 # -------------------------------------------------------
 # 8. Fehlerseiten (optional anpassen)
 # -------------------------------------------------------
-# ErrorDocument 404 /404.html
+ErrorDocument 404 /404.html
